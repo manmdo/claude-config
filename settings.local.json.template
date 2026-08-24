@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-config)",
+      "Bash(cp ~/GitHub/Man_Dev/.claude/commands/design-init.md ~/.claude/commands/)",
+      "Bash(cp ~/GitHub/Man_Dev/.claude/commands/design-start.md ~/.claude/commands/)",
+      "Bash(cp ~/GitHub/Man_Dev/.claude/commands/design-task.md ~/.claude/commands/)",
+      "Bash(cp ~/GitHub/Man_Dev/.claude/commands/design-sync.md ~/.claude/commands/)",
+      "WebSearch",
+      "WebFetch(domain:support.claude.com)",
+      "Bash(colima status *)"
+    ]
+  }
+}

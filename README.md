@@ -1,6 +1,8 @@
 # Claude Code Config Sync
 
-This directory contains Claude Code configuration shared across computers via OneDrive.
+GitHub: https://github.com/manmdo/claude-config
+
+This directory contains Claude Code configuration shared across computers via OneDrive and version-controlled on GitHub.
 
 **Claude config directory:** `~/.claude/` on macOS · `%USERPROFILE%\.claude\` on Windows 11
 

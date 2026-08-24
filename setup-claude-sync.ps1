@@ -36,6 +36,7 @@
 #   gh repo clone manmdo/POC $env:USERPROFILE\GitHub\POC
 #   gh repo clone manmdo/media-scripts $env:USERPROFILE\GitHub\media-scripts
 #   gh repo clone manmdo/dotfiles $env:USERPROFILE\GitHub\dotfiles
+#   gh repo clone manmdo/claude-config $env:USERPROFILE\GitHub\claude-config
 #   gh repo clone manmdo/cheatsheet-python-A4 $env:USERPROFILE\GitHub\cheatsheet-python-A4
 #   gh repo clone manmdo/Learning $env:USERPROFILE\GitHub\Learning
 #   gh repo clone accenture-rde-lab/capstone-pod-4-northwind $env:USERPROFILE\GitHub\capstone-pod-4-northwind

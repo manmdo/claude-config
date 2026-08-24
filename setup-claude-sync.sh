@@ -35,6 +35,7 @@
 #   gh repo clone manmdo/POC ~/GitHub/POC
 #   gh repo clone manmdo/media-scripts ~/GitHub/media-scripts
 #   gh repo clone manmdo/dotfiles ~/GitHub/dotfiles
+#   gh repo clone manmdo/claude-config ~/GitHub/claude-config
 #   gh repo clone manmdo/cheatsheet-python-A4 ~/GitHub/cheatsheet-python-A4
 #   gh repo clone manmdo/Learning ~/GitHub/Learning
 #   gh repo clone accenture-rde-lab/capstone-pod-4-northwind ~/GitHub/capstone-pod-4-northwind

@@ -23,6 +23,10 @@ This directory contains Claude Code configuration shared across computers via On
 
 Skills live in the `Man_Dev` GitHub repo (`Man_Dev/.claude/skills/`), not here.
 
+## Related
+
+- [dotfiles](https://github.com/manmdo/dotfiles) — macOS shell config, Homebrew packages, and personal scripts
+
 ---
 
 ## New Computer Setup — macOS

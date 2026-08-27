@@ -10,7 +10,7 @@ This directory contains Claude Code configuration shared across computers via On
 
 | Item | Description |
 |---|---|
-| `agents/` | Custom agent definitions (13 agents) |
+| `agents/` | Custom agent definitions (see `agents/` directory) |
 | `commands/` | Slash commands (19 commands) |
 | `settings.json` | Global permissions and enabled plugins |
 | `settings.local.json.template` | Template for machine-specific overrides |
@@ -31,7 +31,7 @@ Skills live in the `Man_Dev` GitHub repo (`Man_Dev/.claude/skills/`), not here.
 
 ## New Computer Setup — macOS
 
-Prerequisites: OneDrive signed in and synced, Homebrew installed, `gh` CLI authenticated.
+Prerequisites: OneDrive signed in and synced, Homebrew installed, `gh` CLI authenticated, Claude Code CLI installed (`npm install -g @anthropic-ai/claude-code`).
 
 ```sh
 # 1. Clone all repos
@@ -75,11 +75,16 @@ brew bundle install --file ~/GitHub/dotfiles/Brewfile
 
 ## New Computer Setup — Windows 11
 
-Prerequisites: OneDrive signed in and synced, Git for Windows installed, `gh` CLI authenticated, PowerShell 5.1+.
+Prerequisites: OneDrive signed in and synced, Git for Windows installed, `gh` CLI authenticated, PowerShell 5.1+, Claude Code CLI installed (`npm install -g @anthropic-ai/claude-code`).
 
 > **Note:** Creating symlinks on Windows requires either **Developer Mode** enabled
 > (`Settings > System > For Developers > Developer Mode = On`) or running PowerShell
 > as Administrator.
+
+> **Note:** If running `.ps1` scripts is blocked, allow them for the current user first:
+> ```powershell
+> Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+> ```
 
 ```powershell
 # 1. Clone all repos
@@ -109,6 +114,13 @@ Copy-Item "$env:USERPROFILE\GitHub\Man_Dev\home-CLAUDE.md" "$env:USERPROFILE\CLA
 
 # 3. Run the sync script (creates symlinks, copies settings template)
 & "$env:OneDriveCommercial\Dev_Repository\claude-config\setup-claude-sync.ps1"
+
+# 4. Apply dotfiles (PowerShell profile)
+# If you have a PowerShell profile in dotfiles, copy it here:
+# Copy-Item "$env:USERPROFILE\GitHub\dotfiles\Microsoft.PowerShell_profile.ps1" "$PROFILE"
+
+# 5. Restore packages (if using winget bundle)
+# winget import --import-file "$env:USERPROFILE\GitHub\dotfiles\winget.json"
 ```
 
 ---
@@ -128,4 +140,4 @@ cp ~/.claude/settings.local.json ~/Library/CloudStorage/OneDrive-Accenture/Dev_R
 Copy-Item "$env:USERPROFILE\.claude\settings.local.json" "$env:OneDriveCommercial\Dev_Repository\claude-config\settings.local.json.template"
 ```
 
-`settings.json` is symlinked on both macOS and Windows — changes are live on both, no manual copy needed.
+`settings.json`, `agents/`, and `commands/` are all symlinked on both macOS and Windows — changes are live immediately on the machine where they're made, no manual copy needed.
